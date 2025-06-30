@@ -10,6 +10,34 @@
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+            align-items: flex-start;
+        }
+    
+        .flex-item {
+            width: 100%;
+            max-width: 250px;
+        }
+    
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .flex-item {
+                max-width: 100%;
+            }
+        }
+    
+        </style>
+
 </head>
 
 <body style="margin: 0; padding: 0; overflow-x: hidden;">
@@ -91,14 +119,14 @@
                     <p>Juntos, vemos um mundo onde as pessoas se unem e entram em ação para causar mudanças duradouras
                         em si mesmas, nas suas comunidades e no mundo todo.</p>
 
-                        <div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 40px 0;">
-                            <img src="../images/builder.jpeg" style="width: 100%; max-width: 250px; height: auto; display: block;">
-                            <p style="width: 100%; max-width: 250px; font-family: Arial, sans-serif; line-height: 1.6; margin: 0;">
+                        <div class="flex-container">
+                            <img src="../images/builder.jpeg" alt="Fortalecemos comunidades" class="flex-item"
+                                style="height: auto; display: block;">
+                            <p class="flex-item" style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0;">
                                 <strong>Fortalecemos comunidades:</strong><br>
                                 Colaboramos com líderes comunitários para realizar projetos que tenham impacto real e duradouro na vida das
                                 pessoas.
-                            </p>                   
-                         </div>
+                            </p>                    </div>
 
                     <h3>Trabalhamos de forma diferenciada</h3>
                     <p>Vemos as coisas de forma diferente: nossa perspectiva multidisciplinar nos ajuda a enxergar os
@@ -109,11 +137,12 @@
                     <p>Fazemos a diferença local e globalmente: nossos associados podem ser encontrados nos quatro
                         cantos do mundo.</p>
 
-                        <div style="display: flex; justify-content: center; gap: 20px; margin: 40px 0;">
-                            <img src="../images/action.jpg" alt="O Rotary em ação" style="width: 100%; max-width: 250px; height: auto; display: block;">
-                            <p style="width: 250px; font-family: Arial, sans-serif; line-height: 1.6; margin: 0;">
+                        <div class="flex-container">
+                            <img src="../images/action.jpg" alt="O Rotary em ação" class="flex-item" style="height: auto; display: block;">
+                            <p class="flex-item" style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0;">
                                 <strong>Somos pessoas em ação:</strong><br>
-                                Conectamos pessoas de perspectivas diferentes para trocar ideias, fazer amizades e, acima de tudo, transformar o mundo.
+                                Conectamos pessoas de perspectivas diferentes para trocar ideias, fazer amizades e, acima de tudo, transformar o
+                                mundo.
                             </p>                    
                         </div>
 
@@ -123,13 +152,14 @@
                         seres humanos de todas as origens, independentemente de idade, etnia, raça, cor, habilidade,
                         religião, status socioeconômico, cultura, sexo, orientação sexual ou identidade de gênero.</p>
 
-                        <div style="display: flex; justify-content: flex-end; gap: 20px; margin: 40px 0;">
-                            <img src="../images/solvers.jpeg" alt="Descrição da terceira imagem" style="width: 100%; max-width: 250px; height: auto; display: block">
-                            <p style="width: 250px; font-family: Arial, sans-serif; line-height: 1.6; margin: 0;">
+                        <div class="flex-container">
+                            <img src="../images/solvers.jpeg" alt="Solucionamos problemas" class="flex-item"
+                                style="height: auto; display: block;">
+                            <p class="flex-item" style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0;">
                                 <strong>Solucionamos problemas:</strong><br>
                                 Usando nossa experiência profissional e compromisso pessoal, buscamos soluções inovadoras para garantir a saúde,
                                 estabilidade e prosperidade de comunidades em todo o globo.
-                            </p>                    
+                            </p>                   
                         </div>
 
 
