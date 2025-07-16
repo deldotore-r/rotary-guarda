@@ -364,7 +364,7 @@ section {
     color: var(--silver);
 }
 
-/* ===== CORREÇÕES PARA MENU MOBILE ===== */
+/* ===== CORREÇÕES AGRESSIVAS PARA MENU MOBILE ===== */
 /* Responsividade */
 @media screen and (max-width: 768px) {
     .nav-menu {
@@ -377,37 +377,53 @@ section {
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        /* CORREÇÃO 1: Reduzir padding vertical para economizar espaço */
-        padding: 1rem 0;
-        /* CORREÇÃO 2: Adicionar altura máxima e scroll se necessário */
+        /* CORREÇÃO AGRESSIVA 1: Padding mínimo */
+        padding: 0.5rem 0;
+        /* CORREÇÃO AGRESSIVA 2: Altura máxima mais específica */
         max-height: calc(100vh - 70px);
         overflow-y: auto;
-        /* CORREÇÃO 3: Garantir que o menu fique acima de outros elementos */
         z-index: 999;
+        /* CORREÇÃO AGRESSIVA 3: Forçar display flex */
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .nav-menu.active {
         left: 0;
     }
 
-    /* CORREÇÃO 4: Reduzir significativamente o espaçamento entre links */
+    /* CORREÇÃO AGRESSIVA 4: Margin zero e padding compacto */
     .nav-menu li {
-        margin: 0.3rem 0; /* Reduzido de 1rem para 0.3rem */
+        margin: 0 !important;
+        padding: 0 !important;
+        /* CORREÇÃO AGRESSIVA 5: Altura fixa para cada item */
+        height: auto;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    /* CORREÇÃO 5: Melhorar a área de toque dos links */
+    /* CORREÇÃO AGRESSIVA 6: Links com padding mínimo mas área de toque adequada */
     .nav-menu .nav-link {
-        display: block;
-        padding: 0.8rem 1rem; /* Adicionar padding para melhor usabilidade */
-        border-radius: 5px;
-        margin: 0 1rem; /* Margem lateral para não colar nas bordas */
+        display: block !important;
+        padding: 0.5rem 1rem !important;
+        margin: 0 !important;
+        width: 100%;
+        /* CORREÇÃO AGRESSIVA 7: Altura específica para cada link */
+        min-height: 40px;
+        line-height: 1.2 !important;
+        font-size: 0.9rem !important;
+        border-radius: 0 !important;
         transition: all 0.3s ease;
+        /* CORREÇÃO AGRESSIVA 8: Garantir que ocupe toda a largura */
+        box-sizing: border-box;
     }
 
-    /* CORREÇÃO 6: Melhorar feedback visual no hover/touch */
+    /* CORREÇÃO AGRESSIVA 9: Hover mais sutil */
     .nav-menu .nav-link:hover {
-        background-color: #f8f9fa;
-        color: var(--rotary-royal-blue);
+        background-color: #f8f9fa !important;
+        color: var(--rotary-royal-blue) !important;
     }
 
     .hamburger {
@@ -460,20 +476,23 @@ section {
     }
 }
 
-/* CORREÇÃO 7: Ajustes específicos para telas muito pequenas */
+/* CORREÇÃO AGRESSIVA 10: Telas muito pequenas - ainda mais compacto */
 @media screen and (max-width: 480px) {
     .nav-menu {
-        /* Reduzir ainda mais o padding em telas pequenas */
-        padding: 0.5rem 0;
+        padding: 0.25rem 0 !important;
+        /* CORREÇÃO AGRESSIVA 11: Altura máxima ainda menor */
+        max-height: calc(100vh - 80px) !important;
     }
 
     .nav-menu li {
-        margin: 0.2rem 0; /* Ainda menor em telas pequenas */
+        min-height: 35px !important;
     }
 
     .nav-menu .nav-link {
-        padding: 0.6rem 0.8rem; /* Padding menor para telas pequenas */
-        font-size: 0.95rem; /* Fonte ligeiramente menor */
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.85rem !important;
+        min-height: 35px !important;
+        line-height: 1.1 !important;
     }
 
     .hero {
@@ -502,10 +521,49 @@ section {
     }
 }
 
-/* CORREÇÃO 8: Adicionar suavização para dispositivos touch */
+/* CORREÇÃO AGRESSIVA 12: Telas extra pequenas */
+@media screen and (max-width: 360px) {
+    .nav-menu {
+        padding: 0.1rem 0 !important;
+        max-height: calc(100vh - 75px) !important;
+    }
+
+    .nav-menu li {
+        min-height: 32px !important;
+    }
+
+    .nav-menu .nav-link {
+        padding: 0.3rem 0.6rem !important;
+        font-size: 0.8rem !important;
+        min-height: 32px !important;
+        line-height: 1 !important;
+    }
+}
+
+/* CORREÇÃO AGRESSIVA 13: Garantir que todos os 8 links sejam visíveis */
+@media screen and (max-height: 600px) and (max-width: 768px) {
+    .nav-menu {
+        padding: 0.1rem 0 !important;
+        max-height: calc(100vh - 70px) !important;
+        overflow-y: auto !important;
+    }
+
+    .nav-menu li {
+        min-height: 30px !important;
+    }
+
+    .nav-menu .nav-link {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.75rem !important;
+        min-height: 30px !important;
+        line-height: 1 !important;
+    }
+}
+
+/* CORREÇÃO AGRESSIVA 14: Para dispositivos touch */
 @media (hover: none) and (pointer: coarse) {
     .nav-menu .nav-link:active {
-        background-color: #e9ecef;
+        background-color: #e9ecef !important;
         transform: scale(0.98);
     }
 }
