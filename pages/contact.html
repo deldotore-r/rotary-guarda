@@ -2,224 +2,225 @@
 <html lang="pt-PT">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato</title>
-    <meta name="description"
-        content="Entre em contato com o Rotary Club da Guarda: estamos aqui para responder às suas perguntas.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato</title>
+  <meta name="description"
+    content="Entre em contato com o Rotary Club da Guarda: estamos aqui para responder às suas perguntas.">
+  <link rel="stylesheet" href="../css/style.css" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* Contact Section */
+    .contact-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
 
-    <style>
-        /* Contact Section */
-        .contact-section {
-            background-color: #f8f9fa;
-            padding: 80px 0;
-        }
+    .contact-section .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        .contact-section .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .contact-section .section-header h2 {
+      color: #17458f;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
 
-        .contact-section .section-header h2 {
-            color: #17458f;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+    .contact-section .section-header p {
+      font-size: 1.2em;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-        .contact-section .section-header p {
-            font-size: 1.2em;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    .contact-grid {
+      display: flex;
+      gap: 30px;
+      align-items: stretch;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .contact-grid {
-            display: flex;
-            gap: 30px;
-            align-items: stretch;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .contact-block {
+      flex: 1;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .contact-block {
-            flex: 1;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-        }
+    .contact-block h3 {
+      color: #17458f;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-        .contact-block h3 {
-            color: #17458f;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+    .email-block .btn-email {
+      display: inline-block;
+      background-color: #17458f;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(23, 69, 143, 0.3);
+      transition: all .3s ease;
+      margin: 0 auto 30px;
+      width: 90%;
+      max-width: 340px;
+      box-sizing: border-box;
+    }
 
-        .email-block .btn-email {
-            display: inline-block;
-            background-color: #17458f;
-            color: #fff;
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.3em;
-            font-weight: 600;
-            box-shadow: 0 5px 15px rgba(23, 69, 143, 0.3);
-            transition: all .3s ease;
-            margin: 0 auto 30px;
-        }
+    .email-block .btn-email:hover {
+      background-color: #0f3470;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(23, 69, 143, 0.4);
+    }
 
-        .email-block .btn-email:hover {
-            background-color: #0f3470;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(23, 69, 143, 0.4);
-        }
+    .email-block .email-note {
+      margin-top: auto;
+      padding-top: 30px;
+      border-top: 2px solid #f0f0f0;
+    }
 
-        .email-block .email-note {
-            margin-top: auto;
-            padding-top: 30px;
-            border-top: 2px solid #f0f0f0;
-        }
+    .email-block .email-note p {
+      color: #666;
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: left;
+      margin: 0;
+    }
 
-        .email-block .email-note p {
-            color: #666;
-            font-size: 1.1em;
-            line-height: 1.6;
-            text-align: left;
-            margin: 0;
-        }
+    .email-block .response-time {
+      text-align: center;
+      color: #17458f;
+      font-weight: 600;
+      font-size: 1.1em;
+      margin-top: 30px;
+    }
 
-        .email-block .response-time {
-            text-align: center;
-            color: #17458f;
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-top: 30px;
-        }
+    .reunioes-block p {
+      flex: 1;
+    }
 
-        .reunioes-block p {
-            flex: 1;
-        }
+    .reunioes-block img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
 
-        .reunioes-block img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-    </style>
+    /* Responsivo: Mobile */
+    @media (max-width: 768px) {
+      .contact-grid {
+        flex-direction: column;
+      }
+
+      .reunioes-block {
+        order: -1;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="../index.html" class="nav-logo">
-                    <img src="../images/logo.jpg" alt="Rotary Club da Guarda" class="logo" />
-                </a>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">Sobre Nós</a></li>
-                    <li class="nav-item"><a href="projects.html" class="nav-link">Projectos</a></li>
-                    <li class="nav-item"><a href="events.html" class="nav-link">Eventos</a></li>
-                    <li class="nav-item"><a href="news.html" class="nav-link">Notícias</a></li>
-                    <li class="nav-item"><a href="join.html" class="nav-link">Junte-se a Nós</a></li>
-                    <li class="nav-item"><a href="https://www.rotary.org/pt" target="_blank" class="nav-link">Rotary
-                            Internacional</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contato</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Contato</h1>
-            <p>Estamos aqui para responder às suas perguntas</p>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-logo">
+          <img src="../images/logo.jpg" alt="Rotary Club da Guarda" class="logo" />
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Sobre Nós</a></li>
+          <li class="nav-item"><a href="projects.html" class="nav-link">Projectos</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Eventos</a></li>
+          <li class="nav-item"><a href="news.html" class="nav-link">Notícias</a></li>
+          <li class="nav-item"><a href="join.html" class="nav-link">Junte-se a Nós</a></li>
+          <li class="nav-item"><a href="https://www.rotary.org/pt" target="_blank" class="nav-link">Rotary
+              Internacional</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link active">Contato</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </div>
-    </section>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="section-header">
-            <h2>Manifeste o Seu Interesse</h2>
-            <p>Entre em contacto connosco para saber mais sobre como se juntar ao Rotary Club da Guarda</p>
-        </div>
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contato</h1>
+      <p>Estamos aqui para responder às suas perguntas</p>
+    </div>
+  </section>
 
-        <div class="contact-grid">
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="section-header">
+      <h2>Manifeste o Seu Interesse</h2>
+      <p>Entre em contacto connosco para saber mais sobre como se juntar ao Rotary Club da Guarda</p>
+    </div>
 
-            <!-- Bloco de E-mail -->
-            <div class="contact-block email-block">
-                <div style="text-align:center; margin-bottom:30px;">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20
+    <div class="contact-grid">
+
+      <!-- Bloco de E-mail -->
+      <div class="contact-block email-block">
+        <div style="text-align:center; margin-bottom:30px;">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20
                      4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20
                      8L12 13L4 8V6L12 11L20 6V8Z" fill="#17458f" />
-                    </svg>
-                </div>
-                <h3>Envie um e-mail para:</h3>
-                <a href="mailto:info@rotaryclubguarda.pt?subject=Interesse%20em%20juntar-me%20ao%20Rotary%20Club%20da%20Guarda"
-                    class="btn-email">
-                    guardarotary@gmail.com
-                </a>
-                <div class="email-note">
-                    <p><strong>No seu e-mail, inclua:</strong><br>
-                        • O seu nome e profissão<br>
-                        • Motivação para se juntar ao Rotary<br>
-                        • Melhor forma de contacto
-                    </p>
-                </div>
-                <p class="response-time">Responderemos em 24 a 48 horas!</p>
-            </div>
-
-            <!-- Bloco de Reuniões -->
-            <div class="contact-block reunioes-block">
-                <h3>Reuniões</h3>
-                <p><strong></strong> As nossas reuniões são realizadas todas as terças feiras, às 21h00, no Hotel Lusitânia - Rua das Covas Lote 34, 6300-389 Guarda, Portugal</strong></p>
-                <img src="../images/hotel_lusitania.jpg" alt="Foto das Reuniões" />
-            </div>
-
+          </svg>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Rotary Club da Guarda</h3>
-                    <p>Servindo a comunidade através de projectos de desenvolvimento, educação e promoção da paz.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Links Úteis</h3>
-                    <ul>
-                        <li><a href="https://www.rotary.org" target="_blank">Rotary International</a></li>
-                        <li><a href="https://www.rotaryportugal.org" target="_blank">Rotary Portugal</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p>Email: guardarotary@gmail.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Rotary Club da Guarda. Todos os direitos reservados.</p>
-            </div>
+        <h3>Envie um e-mail para:</h3>
+        <a href="mailto:info@rotaryclubguarda.pt?subject=Interesse%20em%20juntar-me%20ao%20Rotary%20Club%20da%20Guarda"
+          class="btn-email">
+          guardarotary@gmail.com
+        </a>
+        <div class="email-note">
+          <p><strong>No seu e-mail, inclua:</strong><br>
+            • O seu nome e profissão<br>
+            • Motivação para se juntar ao Rotary<br>
+            • Melhor forma de contacto
+          </p>
         </div>
-    </footer>
+        <p class="response-time">Responderemos em 24 a 48 horas!</p>
+      </div>
 
-</body>
+      <!-- Bloco de Reuniões -->
+      <div class="contact-block reunioes-block">
+        <h3>Reuniões</h3>
+        <p><strong>As nossas reuniões são realizadas todas as terças feiras, às 21h00, no Hotel Lusitânia - Rua das Covas Lote 34, 6300-389 Guarda, Portugal</strong></p>
+        <img src="../images/hotel_lusitania.jpg" alt="Foto das Reuniões" />
+      </div>
 
-</html>
-```
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Rotary Club da Guarda</h3>
+          <p>Servindo a comunidade através de projectos de desenvolvimento, educação e promoção da paz.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="https://www.rotary.org" target="_blank">Rotary International</a></li>
+            <li><a href="https://www.rotaryportugal.org" target="_blank">Rotary Portugal</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p>Email: guardarotary@gmail.com</p
