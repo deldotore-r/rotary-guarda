@@ -364,6 +364,7 @@ section {
     color: var(--silver);
 }
 
+/* ===== CORREÇÕES PARA MENU MOBILE ===== */
 /* Responsividade */
 @media screen and (max-width: 768px) {
     .nav-menu {
@@ -376,15 +377,37 @@ section {
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 2rem 0;
+        /* CORREÇÃO 1: Reduzir padding vertical para economizar espaço */
+        padding: 1rem 0;
+        /* CORREÇÃO 2: Adicionar altura máxima e scroll se necessário */
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        /* CORREÇÃO 3: Garantir que o menu fique acima de outros elementos */
+        z-index: 999;
     }
 
     .nav-menu.active {
         left: 0;
     }
 
+    /* CORREÇÃO 4: Reduzir significativamente o espaçamento entre links */
     .nav-menu li {
-        margin: 1rem 0;
+        margin: 0.3rem 0; /* Reduzido de 1rem para 0.3rem */
+    }
+
+    /* CORREÇÃO 5: Melhorar a área de toque dos links */
+    .nav-menu .nav-link {
+        display: block;
+        padding: 0.8rem 1rem; /* Adicionar padding para melhor usabilidade */
+        border-radius: 5px;
+        margin: 0 1rem; /* Margem lateral para não colar nas bordas */
+        transition: all 0.3s ease;
+    }
+
+    /* CORREÇÃO 6: Melhorar feedback visual no hover/touch */
+    .nav-menu .nav-link:hover {
+        background-color: #f8f9fa;
+        color: var(--rotary-royal-blue);
     }
 
     .hamburger {
@@ -437,7 +460,22 @@ section {
     }
 }
 
+/* CORREÇÃO 7: Ajustes específicos para telas muito pequenas */
 @media screen and (max-width: 480px) {
+    .nav-menu {
+        /* Reduzir ainda mais o padding em telas pequenas */
+        padding: 0.5rem 0;
+    }
+
+    .nav-menu li {
+        margin: 0.2rem 0; /* Ainda menor em telas pequenas */
+    }
+
+    .nav-menu .nav-link {
+        padding: 0.6rem 0.8rem; /* Padding menor para telas pequenas */
+        font-size: 0.95rem; /* Fonte ligeiramente menor */
+    }
+
     .hero {
         padding: 120px 0 80px;
     }
@@ -464,6 +502,15 @@ section {
     }
 }
 
+/* CORREÇÃO 8: Adicionar suavização para dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+    .nav-menu .nav-link:active {
+        background-color: #e9ecef;
+        transform: scale(0.98);
+    }
+}
+
+/* ===== RESTO DO CSS ORIGINAL (páginas internas) ===== */
 
 /* Estilos específicos para páginas internas */
 
