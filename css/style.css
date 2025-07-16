@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Variáveis CSS com as cores do Rotary Brand Center */
+/* Variáveis CSS */
 :root {
     --rotary-royal-blue: #17458f;
     --rotary-gold: #f7a81b;
@@ -16,11 +16,7 @@
     --charcoal: #54565a;
     --silver: #d0cfcd;
     --smoke: #b1b1b1;
-
-    /* Tipografia */
     --primary-font: 'Open Sans', Arial, sans-serif;
-
-    /* Espaçamentos */
     --container-max-width: 1200px;
     --section-padding: 80px 0;
     --element-margin: 2rem;
@@ -33,7 +29,6 @@ body {
     background-color: var(--white);
 }
 
-/* Container */
 .container {
     max-width: var(--container-max-width);
     margin: 0 auto;
@@ -207,118 +202,6 @@ section {
     margin: 0 auto;
 }
 
-/* About Preview Section */
-.about-preview {
-    background-color: #f8f9fa;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.about-card {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.about-card:hover {
-    transform: translateY(-5px);
-}
-
-.card-icon {
-    margin-bottom: 1rem;
-}
-
-.about-card h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.about-card p {
-    color: var(--charcoal);
-    line-height: 1.6;
-}
-
-/* Areas of Focus */
-.areas-focus {
-    background-color: var(--white);
-}
-
-.focus-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.focus-item {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    border-left: 4px solid var(--rotary-gold);
-    transition: all 0.3s ease;
-}
-
-.focus-item:hover {
-    background-color: var(--rotary-royal-blue);
-    color: var(--white);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(23, 69, 143, 0.3);
-}
-
-.focus-item h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.focus-item:hover h3 {
-    color: var(--white);
-}
-
-.focus-item p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* CTA Section */
-.cta {
-    background: linear-gradient(135deg, var(--rotary-gold) 0%, #e6971a 100%);
-    color: var(--white);
-    text-align: center;
-}
-
-.cta-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.cta-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-}
-
-.cta .btn-primary {
-    background-color: var(--white);
-    color: var(--rotary-gold);
-}
-
-.cta .btn-primary:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-}
-
 /* Footer */
 .footer {
     background-color: var(--charcoal);
@@ -364,8 +247,9 @@ section {
     color: var(--silver);
 }
 
-/* ===== CORREÇÕES PARA MENU MOBILE ===== */
-/* Responsividade */
+/* ===================== MEDIA QUERIES ===================== */
+
+/* Mobile (até 768px) */
 @media screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -377,37 +261,30 @@ section {
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        /* CORREÇÃO 1: Reduzir padding vertical para economizar espaço */
         padding: 1rem 0;
-        /* CORREÇÃO 2: Adicionar altura máxima e scroll se necessário */
         max-height: calc(100vh - 70px);
         overflow-y: auto;
-        /* CORREÇÃO 3: Garantir que o menu fique acima de outros elementos */
         z-index: 999;
+        gap: 0.4rem;
+        align-items: flex-start;
     }
 
     .nav-menu.active {
         left: 0;
     }
 
-    /* CORREÇÃO 4: Reduzir significativamente o espaçamento entre links */
     .nav-menu li {
         margin: 0.3rem 0;
-        /* Reduzido de 1rem para 0.3rem */
     }
 
-    /* CORREÇÃO 5: Melhorar a área de toque dos links */
     .nav-menu .nav-link {
         display: block;
         padding: 0.8rem 1rem;
-        /* Adicionar padding para melhor usabilidade */
         border-radius: 5px;
         margin: 0 1rem;
-        /* Margem lateral para não colar nas bordas */
         transition: all 0.3s ease;
     }
 
-    /* CORREÇÃO 6: Melhorar feedback visual no hover/touch */
     .nav-menu .nav-link:hover {
         background-color: #f8f9fa;
         color: var(--rotary-royal-blue);
@@ -449,37 +326,21 @@ section {
     .section-header h2 {
         font-size: 2rem;
     }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .focus-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-content h2 {
-        font-size: 2rem;
-    }
 }
 
-/* CORREÇÃO 7: Ajustes específicos para telas muito pequenas */
+/* Telas muito pequenas (até 480px) */
 @media screen and (max-width: 480px) {
     .nav-menu {
-        /* Reduzir ainda mais o padding em telas pequenas */
         padding: 0.5rem 0;
     }
 
     .nav-menu li {
         margin: 0.2rem 0;
-        /* Ainda menor em telas pequenas */
     }
 
     .nav-menu .nav-link {
         padding: 0.6rem 0.8rem;
-        /* Padding menor para telas pequenas */
         font-size: 0.95rem;
-        /* Fonte ligeiramente menor */
     }
 
     .hero {
@@ -506,394 +367,20 @@ section {
     .focus-item {
         padding: 1.5rem;
     }
-}
 
-/* CORREÇÃO 8: Adicionar suavização para dispositivos touch */
-@media (hover: none) and (pointer: coarse) {
-    .nav-menu .nav-link:active {
-        background-color: #e9ecef;
-        transform: scale(0.98);
-    }
-}
-
-/* ===== RESTO DO CSS ORIGINAL (páginas internas) ===== */
-
-/* Estilos específicos para páginas internas */
-
-/* Page Header */
-.page-header {
-    background: linear-gradient(135deg, var(--rotary-royal-blue) 0%, var(--azure) 100%);
-    color: var(--white);
-    padding: 120px 0 60px;
-    text-align: center;
-    margin-top: 70px;
-}
-
-.page-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.page-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* Content Grid */
-.content-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.content-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.content-text h3 {
-    color: var(--rotary-royal-blue);
-    margin: 2rem 0 1rem;
-    font-size: 1.8rem;
-}
-
-.content-text p {
-    margin-bottom: 1.5rem;
-}
-
-/* Principles */
-.principles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.principle-item {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--rotary-gold);
-    text-align: center;
-}
-
-.principle-item h4 {
-    color: var(--rotary-royal-blue);
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-/* Focus Detailed Grid */
-.focus-detailed-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.focus-detailed-item {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    border-top: 4px solid var(--rotary-gold);
-}
-
-.focus-detailed-item:hover {
-    transform: translateY(-5px);
-}
-
-.focus-icon {
-    margin-bottom: 1.5rem;
-}
-
-.focus-detailed-item h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.focus-detailed-item p {
-    color: var(--charcoal);
-    line-height: 1.6;
-}
-
-/* Areas Focus Detailed */
-.areas-focus-detailed {
-    background-color: #f8f9fa;
-}
-
-/* Club History */
-.club-history {
-    background-color: var(--white);
-}
-
-.history-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.history-text h3 {
-    color: var(--rotary-royal-blue);
-    margin: 2rem 0 1rem;
-    font-size: 1.8rem;
-}
-
-.history-text p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.values-list {
-    list-style: none;
-    padding: 0;
-}
-
-.values-list li {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 5px;
-    border-left: 4px solid var(--rotary-gold);
-}
-
-.values-list strong {
-    color: var(--rotary-royal-blue);
-}
-
-/* Projects Page Styles */
-.project-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-content {
-    padding: 1.5rem;
-}
-
-.project-card h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.project-status {
-    display: inline-block;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.status-active {
-    background-color: var(--rotary-gold);
-    color: var(--white);
-}
-
-.status-completed {
-    background-color: var(--azure);
-    color: var(--white);
-}
-
-.status-planned {
-    background-color: var(--smoke);
-    color: var(--charcoal);
-}
-
-/* Events Page Styles */
-.event-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    border-left: 4px solid var(--rotary-gold);
-}
-
-.event-card:hover {
-    transform: translateY(-3px);
-}
-
-.event-date {
-    background-color: var(--rotary-royal-blue);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
-.event-card h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 0.5rem;
-}
-
-.event-location {
-    color: var(--charcoal);
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-/* Contact Form Styles */
-.contact-form {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--rotary-royal-blue);
-    font-weight: 600;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--rotary-royal-blue);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-/* Join Page Styles */
-.membership-benefits {
-    background-color: #f8f9fa;
-}
-
-.benefit-item {
-    background-color: var(--white);
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.benefit-icon {
-    margin-bottom: 1rem;
-}
-
-.benefit-item h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-}
-
-/* News Page Styles */
-.news-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-3px);
-}
-
-.news-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.news-content {
-    padding: 1.5rem;
-}
-
-.news-date {
-    color: var(--rotary-gold);
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.news-card h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-}
-
-.news-excerpt {
-    color: var(--charcoal);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.read-more {
-    color: var(--rotary-royal-blue);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.read-more:hover {
-    color: var(--rotary-gold);
-}
-
-/* Responsividade para páginas internas */
-@media screen and (max-width: 768px) {
-    .page-header {
-        padding: 100px 0 40px;
+    .interest-form {
+        padding: 1.5rem;
     }
 
-    .page-header h1 {
-        font-size: 2.5rem;
+    .requirement-item,
+    .step-item {
+        padding: 1.5rem;
     }
 
-    .focus-detailed-grid {
-        grid-template-columns: 1fr;
+    .contact-form {
+        padding: 1.5rem;
     }
 
-    .principles {
-        grid-template-columns: 1fr;
-    }
-
-    .content-text {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
     .page-header h1 {
         font-size: 2rem;
     }
@@ -904,387 +391,20 @@ section {
     .news-card {
         margin-bottom: 1rem;
     }
+}
 
-    .contact-form {
-        padding: 1.5rem;
+/* Dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+    .nav-menu .nav-link:active {
+        background-color: #e9ecef;
+        transform: scale(0.98);
     }
 }
 
-
-/* Contact Page Styles */
-.contact-section {
-    background-color: #f8f9fa;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-}
-
-.contact-form-container h2 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-    font-size: 2rem;
-}
-
-.contact-form-container p {
-    margin-bottom: 2rem;
-    color: var(--charcoal);
-    line-height: 1.6;
-}
-
-.contact-info h2 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-icon {
-    margin-right: 1rem;
-    flex-shrink: 0;
-}
-
-.contact-details h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.contact-details p {
-    color: var(--charcoal);
-    margin: 0;
-    line-height: 1.5;
-}
-
-.social-links {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background-color: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.social-links h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #f8f9fa;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    background-color: var(--rotary-royal-blue);
-}
-
-.social-link:hover svg path {
-    fill: var(--white);
-}
-
-/* Map Section */
-.map-section {
-    background-color: var(--white);
-}
-
-.map-placeholder {
-    background-color: #f8f9fa;
-    border: 2px dashed var(--smoke);
-    border-radius: 10px;
-    padding: 3rem;
-    text-align: center;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.map-content h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.map-content p {
-    color: var(--charcoal);
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-/* Responsividade para página de contato */
-@media screen and (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+/* Desktop (mínimo 769px) - correção de espaçamento e alinhamento do menu */
+@media screen and (min-width: 769px) {
+    .nav-menu {
+        gap: 1rem;
+        justify-content: flex-start;
     }
-
-    .contact-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-icon {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .map-placeholder {
-        padding: 2rem;
-        min-height: 200px;
-    }
-}
-
-
-/* Join Page Styles */
-.why-join {
-    background-color: var(--white);
-}
-
-.join-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.join-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.benefits-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 2rem;
-}
-
-.benefits-list li {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 5px;
-    border-left: 4px solid var(--rotary-gold);
-    position: relative;
-    padding-left: 3rem;
-}
-
-.benefits-list li::before {
-    content: '✓';
-    position: absolute;
-    left: 1rem;
-    color: var(--rotary-gold);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-/* Membership Requirements */
-.membership-requirements {
-    background-color: #f8f9fa;
-}
-
-.requirements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.requirement-item {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    border-top: 4px solid var(--rotary-royal-blue);
-}
-
-.requirement-item h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.requirements-note {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid var(--rotary-gold);
-}
-
-.requirements-note h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-}
-
-/* Interest Form */
-.interest-form-section {
-    background-color: var(--white);
-}
-
-.form-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.interest-form {
-    background-color: #f8f9fa;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.checkbox-group {
-    margin-top: 1rem;
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: flex-start;
-    cursor: pointer;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.checkbox-label input[type="checkbox"] {
-    margin-right: 0.5rem;
-    margin-top: 0.2rem;
-    flex-shrink: 0;
-}
-
-.checkmark {
-    margin-left: 0.5rem;
-}
-
-/* Next Steps */
-.next-steps {
-    background-color: #f8f9fa;
-}
-
-.steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.step-item {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.step-number {
-    width: 50px;
-    height: 50px;
-    background-color: var(--rotary-gold);
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0 auto 1rem;
-}
-
-.step-item h3 {
-    color: var(--rotary-royal-blue);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.step-item p {
-    color: var(--charcoal);
-    line-height: 1.6;
-}
-
-/* Responsividade para página de adesão */
-@media screen and (max-width: 768px) {
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .requirements-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .steps-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .benefits-list li {
-        padding-left: 2.5rem;
-    }
-
-    .benefits-list li::before {
-        left: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .interest-form {
-        padding: 1.5rem;
-    }
-
-    .requirement-item,
-    .step-item {
-        padding: 1.5rem;
-    }
-
-    .simple-contact-section {
-        background-color: #f8f9fa;
-        padding: 80px 0;
-    }
-
-    @media (max-width: 768px) {
-      .nav-menu {
-        gap: 0.4rem; /* ou um valor que fique agradável no seu layout mobile */
-        flex-direction: column; /* se ainda não estiver definido */
-        align-items: flex-start; /* opcional, para alinhamento à esquerda */
-  }
-}
 }
