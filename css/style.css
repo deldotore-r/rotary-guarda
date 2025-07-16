@@ -16,10 +16,10 @@
     --charcoal: #54565a;
     --silver: #d0cfcd;
     --smoke: #b1b1b1;
-    
+
     /* Tipografia */
     --primary-font: 'Open Sans', Arial, sans-serif;
-    
+
     /* Espaçamentos */
     --container-max-width: 1200px;
     --section-padding: 80px 0;
@@ -392,15 +392,18 @@ section {
 
     /* CORREÇÃO 4: Reduzir significativamente o espaçamento entre links */
     .nav-menu li {
-        margin: 0.3rem 0; /* Reduzido de 1rem para 0.3rem */
+        margin: 0.3rem 0;
+        /* Reduzido de 1rem para 0.3rem */
     }
 
     /* CORREÇÃO 5: Melhorar a área de toque dos links */
     .nav-menu .nav-link {
         display: block;
-        padding: 0.8rem 1rem; /* Adicionar padding para melhor usabilidade */
+        padding: 0.8rem 1rem;
+        /* Adicionar padding para melhor usabilidade */
         border-radius: 5px;
-        margin: 0 1rem; /* Margem lateral para não colar nas bordas */
+        margin: 0 1rem;
+        /* Margem lateral para não colar nas bordas */
         transition: all 0.3s ease;
     }
 
@@ -468,12 +471,15 @@ section {
     }
 
     .nav-menu li {
-        margin: 0.2rem 0; /* Ainda menor em telas pequenas */
+        margin: 0.2rem 0;
+        /* Ainda menor em telas pequenas */
     }
 
     .nav-menu .nav-link {
-        padding: 0.6rem 0.8rem; /* Padding menor para telas pequenas */
-        font-size: 0.95rem; /* Fonte ligeiramente menor */
+        padding: 0.6rem 0.8rem;
+        /* Padding menor para telas pequenas */
+        font-size: 0.95rem;
+        /* Fonte ligeiramente menor */
     }
 
     .hero {
@@ -869,19 +875,19 @@ section {
     .page-header {
         padding: 100px 0 40px;
     }
-    
+
     .page-header h1 {
         font-size: 2.5rem;
     }
-    
+
     .focus-detailed-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .principles {
         grid-template-columns: 1fr;
     }
-    
+
     .content-text {
         font-size: 1rem;
     }
@@ -891,14 +897,14 @@ section {
     .page-header h1 {
         font-size: 2rem;
     }
-    
+
     .focus-detailed-item,
     .project-card,
     .event-card,
     .news-card {
         margin-bottom: 1rem;
     }
-    
+
     .contact-form {
         padding: 1.5rem;
     }
@@ -1034,21 +1040,21 @@ section {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .contact-item {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .contact-icon {
         margin-right: 0;
         margin-bottom: 1rem;
     }
-    
+
     .social-icons {
         justify-content: center;
     }
-    
+
     .map-placeholder {
         padding: 2rem;
         min-height: 200px;
@@ -1237,23 +1243,23 @@ section {
     .benefits-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .requirements-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+
     .steps-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .benefits-list li {
         padding-left: 2.5rem;
     }
-    
+
     .benefits-list li::before {
         left: 0.8rem;
     }
@@ -1263,11 +1269,12 @@ section {
     .interest-form {
         padding: 1.5rem;
     }
-    
+
     .requirement-item,
     .step-item {
         padding: 1.5rem;
     }
+
     .simple-contact-section {
         background-color: #f8f9fa;
         padding: 80px 0;
