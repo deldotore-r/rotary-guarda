@@ -3,30 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projetos</title>
-    <meta name="description" content="<Projetos>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Sobre Nós</title>
+    <meta name="description"
+        content="Conheça o Rotary Club da Guarda, a nossa história, missão e como trabalhamos para servir a comunidade local e global.">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+            align-items: flex-start;
+        }
+
+        .flex-item {
+            width: 100%;
+            max-width: 250px;
+        }
+
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .flex-item {
+                max-width: 100%;
+            }
+        }
+    </style>
+
 </head>
 
-<body>
-
-    <!-- ====== HEADER ====== -->
+<body style="margin: 0; padding: 0; overflow-x: hidden;">
+    <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="../images/logo.jpg" alt="Rotary Club da Guarda" class="logo">
+                    <a href="../index.html">
+                        <img src="../images/logo.jpg" alt="Rotary Club da Guarda" class="logo">
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="../index.html" class="nav-link">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link <!-- adicionar 'active' aqui se for esta página-->">Sobre
-                            Nós</a>
+                        <a href="about.html" class="nav-link active">Sobre Nós</a>
                     </li>
                     <li class="nav-item">
                         <a href="projects.html" class="nav-link">Projetos</a>
@@ -38,13 +66,13 @@
                         <a href="news.html" class="nav-link">Notícias</a>
                     </li>
                     <li class="nav-item">
-                        <a href="join.html" class="nav-link">Junte-se a Nós</a>
+                        <a href="join.html" class="nav-link">Junte-se a nós</a>
                     </li>
-                      <li class="nav-item">
+                    <li class="nav-item">
                         <a href="https://www.rotary.org/pt" target="_blank" class="nav-link">Rotary Internacional</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contato</a>
+                        <a href="contact.html" class="nav-link">Contacto</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -56,52 +84,15 @@
         </nav>
     </header>
 
-    <!-- ====== MAIN (conteúdo específico de cada página) ====== -->
-    <main class="container">
-        <!-- exemplo de seção de cabeçalho de página -->
-        <section class="page-header">
-            <h1><!-- TÍTULO INTERNO --></h1>
-            <p><!-- SUBTÍTULO OU DESCRIÇÃO CURTA --></p>
-        </section>
+    <body>
 
-        <!-- aqui vai todo o HTML exclusivo da página -->
-        <section class="page-content">
-            <!-- EXEMPLO:
-      <h2>Quem Somos</h2>
-      <p>Texto sobre a página “Sobre Nós”…</p>
-      -->
-        </section>
-    </main>
-
-    <!-- ====== FOOTER ====== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Rotary Club da Guarda</h3>
-                    <p>Servindo a comunidade através de projetos de desenvolvimento, educação e promoção da paz.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Links Úteis</h3>
-                    <ul>
-                        <li><a href="https://www.rotary.org/pt" target="_blank">Rotary International</a></li>
-                        <li><a href="https://brandcenter.rotary.org" target="_blank">Brand Center</a></li>
-                        <li><a href="https://www.rotaryportugal.org" target="_blank">Rotary Portugal</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p>Email: info@rotaryclubguarda.pt</p>
-                    <p>Telefone: +351 271 000 000</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Rotary Club da Guarda. Todos os direitos reservados.</p>
-            </div>
+        <br><br><br><br><br><br><br><br>
+        <p style="text-align: center; font-size: 80px; color: #17458f;"><strong>EM BREVE!</strong></p>
+        <br><br>
+        <div style="text-align: center;">
+            <img src="../images/logo.jpg" alt="Rotary Club da Guarda">
         </div>
-    </footer>
 
-    <script src="../js/script.js"></script>
-</body>
+    </body>
 
 </html>
