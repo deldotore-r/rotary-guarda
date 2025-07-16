@@ -1279,4 +1279,12 @@ section {
         background-color: #f8f9fa;
         padding: 80px 0;
     }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        gap: 0.4rem; /* ou um valor que fique agradável no seu layout mobile */
+        flex-direction: column; /* se ainda não estiver definido */
+        align-items: flex-start; /* opcional, para alinhamento à esquerda */
+  }
+}
 }
