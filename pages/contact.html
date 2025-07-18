@@ -112,11 +112,26 @@
             margin-top: 20px;
             border-radius: 8px;
         }
+
+        /* Media Query para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            .contact-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .reunioes-block {
+                order: -1; /* Faz o bloco de Reuniões aparecer primeiro */
+            }
+
+            .contact-block {
+                width: 100%; /* Garante que os blocos ocupem toda a largura */
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -156,7 +171,6 @@
         </div>
     </section>
 
- 
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="section-header">
@@ -165,14 +179,13 @@
         </div>
 
         <div class="contact-grid">
-
             <!-- Bloco de E-mail -->
             <div class="contact-block email-block">
                 <div style="text-align:center; margin-bottom:30px;">
                     <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20
-                     4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20
-                     8L12 13L4 8V6L12 11L20 6V8Z" fill="#17458f" />
+                            4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20
+                            8L12 13L4 8V6L12 11L20 6V8Z" fill="#17458f" />
                     </svg>
                 </div>
                 <h3>Envie um e-mail para:</h3>
@@ -196,7 +209,6 @@
                 <p><strong></strong> As nossas reuniões são realizadas todas as terças feiras, às 21h00, no Hotel Lusitânia - Rua das Covas Lote 34, 6300-389 Guarda, Portugal</strong></p>
                 <img src="../images/hotel_lusitania.jpg" alt="Foto das Reuniões" />
             </div>
-
         </div>
     </section>
 
@@ -221,22 +233,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Rotary Club da Guarda. Todos os direitos reservados.</p>
+                <p>© 2025 Rotary Club da Guarda. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
 
-        hamburger.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-    });
-</script>
 </body>
-
 </html>
-```
